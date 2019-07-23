@@ -1,12 +1,11 @@
-import GetElements from "../helpers/get-elements";
-import SortElements from "../helpers/sort-elements";
-import BindEvents from "../helpers/bind-events";
+import Get from "../helpers/get";
+import Bind from "../helpers/bind";
 
 function HeaderMenu() {
-	const Button = new GetElements(false, ".toggle-button");
-	const Menu = new GetElements(false, ".menu");
+	const Button = Get(".toggle-button");
+	const Menu = Get(".menu");
 
-	BindEvents("click", Button, () => {
+	Bind(Button, () => {
 		Button.classList.toggle("is-active");
 		Menu.classList.toggle("is-active");
 	});
