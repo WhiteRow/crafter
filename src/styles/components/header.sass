@@ -1,0 +1,35 @@
+.l-header 
+    position: fixed
+    z-index: 4
+    .toggle-button
+        border: 0px solid $white
+        background-color: transparent
+
+        transition: 0.2s ease-in-out
+
+        &-line 
+            height: 2px
+            background-color: #222222
+            transition: 0.2s ease-in-out
+
+            &:not(:last-child)
+                margin-bottom: 8px
+
+            &:first-child 
+                width: 30px
+            &:nth-child(2)
+                width: 17px
+            &:last-child 
+                width: 23px
+
+    /* State */
+    .toggle-button.is-active 
+        transform: translateX(100%)
+        .toggle-button-line 
+            &:first-child 
+                opacity: 0
+            &:nth-child(2) 
+                transform: rotate(45deg)
+                width: 23px
+            &:last-child 
+                transform: rotate(-45deg) translate(7px,-7px)

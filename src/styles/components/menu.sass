@@ -1,0 +1,36 @@
+.menu 
+    width: 100%
+    max-width: 500px
+    padding: 130px 115px
+
+    background-color: $white
+    box-shadow: 0px 20px 50px rgba(70, 129, 255, 0.1)
+
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 3
+
+    transition: transform 0.3s ease-in-out
+    transform: translateX(-100%)
+    
+    a 
+        color: $black
+    
+    &-navbar 
+        &-item
+            transition: 0.2s ease-in
+            &:not(:last-child)
+                margin-bottom: 20px
+            &-link 
+                font-size: 18px
+                font-weight: 600
+            
+            &:hover 
+                transform: translateX(2px)
+
+            &:hover &-link 
+                color: #333    
+
+.menu.is-active 
+    transform: translateX(0%)
