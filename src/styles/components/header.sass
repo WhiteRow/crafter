@@ -1,26 +1,29 @@
 .l-header 
+    padding: 10px 0
     position: fixed
     z-index: 4
     .toggle-button
+        padding: 10px 10px
         border: 0px solid $white
-        background-color: transparent
+        background-color: $white
 
         transition: 0.2s ease-in-out
 
         &-line 
-            height: 2px
+            width: 30px
+            height: 3px
             background-color: #222222
             transition: 0.2s ease-in-out
 
             &:not(:last-child)
                 margin-bottom: 8px
 
-            &:first-child 
-                width: 30px
-            &:nth-child(2)
-                width: 17px
-            &:last-child 
-                width: 23px
+            // &:first-child 
+            //     width: 30px
+            // &:nth-child(2)
+            //     width: 17px
+            // &:last-child 
+            //     width: 23px
 
     /* State */
     .toggle-button.is-active 

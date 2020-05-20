@@ -1,37 +1,45 @@
 {
-  "name": "crafter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "browserslist": [
-    "last 1 version",
-    "> 1%"
-  ],
-  "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "autoprefixer": "^9.6.1",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.0.0",
-    "cssnano": "^4.1.10",
-    "file-loader": "^4.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^5.0.0",
-    "mini-css-extract-plugin": "^0.7.0",
-    "postcss-loader": "^3.0.0",
-    "sass": "^1.22.4",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2",
-    "webpack-md5-hash": "0.0.6"
-  }
+	"name": "crafter",
+	"version": "0.0.1",
+	"description": "Landing page for digital company",
+	"main": "app.js",
+	"browserslist": [
+		"last 1 version",
+		"> 1%"
+	],
+	"scripts": {
+		"start": "webpack-dev-server --mode development",
+		"build": "webpack --mode production"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [],
+	"author": {
+		"name": "Egor Belov",
+		"email": "meekgot@gmail.com"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.5.4",
+		"@babel/preset-env": "^7.5.4",
+		"autoprefixer": "^9.6.1",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^3.0.0",
+		"cssnano": "^4.1.10",
+		"file-loader": "^4.2.0",
+		"html-webpack-plugin": "^3.2.0",
+		"image-webpack-loader": "^5.0.0",
+		"mini-css-extract-plugin": "^0.7.0",
+		"postcss-loader": "^3.0.0",
+		"sass": "^1.22.4",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.35.3",
+		"webpack-cli": "^3.3.5",
+		"webpack-dev-server": "^3.7.2",
+		"webpack-md5-hash": "0.0.6",
+		"webpack-merge": "^4.2.1"
+	}
 }

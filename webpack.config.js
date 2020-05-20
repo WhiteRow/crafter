@@ -1,108 +1,54 @@
-const path = require('path'),
-    paths = {
-        source: path.join(__dirname, 'src'),
-        distribution: path.join(__dirname, 'dist'),
-    },
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-    cssnano = require('cssnano')(),
-    autoprefixer = require('autoprefixer')
+const path = require('path');
+const merge = require('webpack-merge');
+const scripts = require('./webpack/scripts');
+const styles = require('./webpack/styles');
+const extractCSS = require('./webpack/styles.extract');
+const images = require('./webpack/images');
+const surceMap = require('./webpack/sourceMap');
+const server = require('./webpack/server');
+const extractFiles = require('./webpack/files.extract');
 
-module.exports = {
+const paths = {
+	source: path.join(__dirname, 'src'),
+	distribution: path.join(__dirname, 'dist')
+};
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-    entry: {
-        app: paths.source + '/js/app.js'
-    },
+const main = merge([
+	{
+		entry: {
+			app: paths.source + '/js/app.js'
+		},
 
-    output: {
-        path: paths.distribution,
-        filename: 'js/bundle.js'
-    },
+		output: {
+			path: paths.distribution,
+			filename: 'js/bundle.js'
+		},
 
-    devServer: {
-        open: true,
-        overlay: true,
-        port: 7000,
-    },
+		resolve: {
+			extensions: ['.js', '.json', '*']
+		},
 
-    devtool: 'sourcemap',
+		plugins: [
+			new HtmlWebpackPlugin({
+				filename: 'index.html',
+				template: paths.source + '/index.html',
+				favicon: paths.source + '/favicon.png'
+			})
+		]
+	},
 
-    resolve: {
-        extensions: ['.js', '.json', '*'],
-    },
+	scripts(),
+	images(),
+	surceMap(),
+	extractFiles()
+]);
 
-    module: {
-        rules: [{
-                test: /\.js$/,
-                exclude: /node_modules/,
-
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            },
-            {
-                test: /\.(sc|sa)ss$/,
-                use: [{
-                        loader: 'style-loader',
-                    },
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [autoprefixer, cssnano],
-                        },
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            implementation: require("sass"),
-                            sourceMap: true
-                        }
-                    },
-                ],
-            },
-            {
-                test: /\.(jpg|png)$/,
-                use: [{
-                        loader: 'file-loader',
-                        options: {
-                            name: 'images/[name].[ext]',
-                        },
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 100,
-                            },
-                            pngquant: {
-                                speed: 4,
-                            },
-                        },
-                    },
-                ],
-            },
-        ]
-    },
-
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: paths.source + '/index.html',
-            favicon: paths.source + '/favicon.png',
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/app.css',
-        }),
-    ]
-}
+module.exports = function(env, argv) {
+	if (argv.mode === 'production') {
+		return merge([main, extractCSS()]);
+	}
+	if (argv.mode === 'development') {
+		return merge([main, server(), styles()]);
+	}
+};

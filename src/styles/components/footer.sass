@@ -1,0 +1,95 @@
+.footer 
+    padding: 80px
+
+    background-color: $off_black
+
+    &-grid 
+        display: flex
+        align-items: flex-start
+
+        margin: 0 -30px
+
+    &-row,
+    &-nav  
+        display: flex        
+
+    &-row 
+        width: 100%
+        justify-content: space-between
+
+    &-nav 
+        flex-direction: column
+
+    &-col
+        $sides_margin: 30px 
+        flex: calc(25% - #{$sides_margin*2})
+        max-width: calc(25% - #{$sides_margin*2})
+        margin: 0 $sides_margin
+
+        &-title 
+            margin-bottom: 25px
+
+            color: $white
+            font-size: 18px
+        
+        &-text 
+            font-size: 14px
+            color: $gray
+            line-height: 1.8
+
+            &.link 
+                margin-bottom: 10px
+
+                &:hover,
+                &:focus
+                    color: $white
+                
+                &:active 
+                    opacity: .5
+
+    &-form 
+        height: 40px 
+        margin-top: 20px
+
+        font-size: 14px               
+
+    &-input
+        width: 80%
+        height: 100%
+        padding: 10px 20px
+
+        outline: 0
+        border: 1px solid rgba(238, 238, 238, 0.15)
+        background-color: #2d2d3c
+
+        color: $white 
+
+        &::placeholder 
+            color: $white
+
+        &:focus
+            border: 1px solid $primary_color
+            background-color: $sub_black    
+
+        &:invalid
+            border: 1px solid $error_red
+
+
+    &-button 
+        width: 19%
+        height: 100%
+        margin-left: -3px    
+
+        background: $primary_gradient
+        border: 0
+
+        color: $white
+
+    &-icon 
+        width: 20px
+        height: 20px
+
+        fill: $white
+
+        &:hover 
+            fill: $primary_color

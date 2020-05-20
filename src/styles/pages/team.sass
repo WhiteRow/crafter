@@ -1,0 +1,57 @@
+.team 
+    margin-top: 100px
+
+    &-slider
+        width: 100%
+        position: relative
+        .slider-image
+            max-width: 540px 
+        .slider-controll
+            position: absolute
+            bottom: 50px
+            right: 275px
+
+    &-coll 
+        position: relative  
+        .description
+            margin-bottom: 50px
+        &:first-child 
+            width: 50%
+        &:nth-child(2)
+            width: 40%
+        
+    &-about 
+        width: 100%
+        max-width: 380px
+        padding: 20px
+        
+        background-color: $white
+        
+        position: absolute
+        bottom: 5%
+        left: 50%
+        transform: translate(-50%, 0)
+
+    &-name 
+        font-size: 18px
+        color: $off_black
+    
+    &-position 
+        font-size: 14px
+        color: $gray
+    
+    &-social
+        .link 
+            display: inline-block
+            &:hover .team-social-icon
+                background: $primary_gradient
+
+        &-icon
+            width: 35px
+            height: 35px
+            padding: 10px
+            margin: 5px
+            fill: $white
+            background: $off_gray
+
+/* TODO: Посмотреть слайдер в портфолио: у итемов сделать фиксированную ширину */

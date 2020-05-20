@@ -1,0 +1,61 @@
+.about 
+    margin-top: 100px
+    padding: 100px 0
+
+    background-image: url('../images/video-bg-shape.png')
+    background-repeat: no-repeat
+
+    .l-block 
+        &:first-child
+            width: 100%
+            max-width: 570px
+        &:last-child
+            width: 100%
+            max-width: 470px
+
+    .video-block
+        position: relative
+
+        .watch-video-button 
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+    
+        .video-background 
+            width: 100% 
+            max-height: 350px
+            border-radius: 20px
+    
+    .merits-count 
+        padding: 20px
+        margin-top: 40px
+        background-color: #f4f8ff
+
+        
+        flex-wrap: wrap
+
+        &-item 
+            padding: 30px 20px
+            flex: 0 0 48%
+            background-color: $white
+            text-align: center
+
+            &:nth-child(1), 
+            &:nth-child(2)
+                margin-bottom: 20px
+
+            &:hover 
+                background: linear-gradient(90deg, #4ba0f9 0%, #85f3f9 100%)
+
+            &:hover .merits-count-text, 
+            &:hover .merits-count-text_bold 
+                color: $white  
+
+        &-text
+            color: $gray
+            font-size: 14px
+            &_bold
+                color: #222222
+                font-size: 20px
+                font-weight: 600

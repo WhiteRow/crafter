@@ -1,0 +1,78 @@
+.blog 
+    margin-bottom: 120px
+    &-box
+        display: flex
+
+        &.top-grid         
+            margin-bottom: 70px 
+            align-items: flex-end
+            justify-content: space-between
+
+        &.cards-grid
+            margin: 0 -15px
+
+        &-part
+            max-width: 500px
+
+    &-title 
+        max-width: 400px     
+
+    &-card
+        $sides_margin: 15px
+
+        max-width: calc(33.3% - #{$sides_margin*2})
+        flex: 0 0 calc(33.3% - #{$sides_margin*2})
+        margin: 0 $sides_margin
+
+        border: 1px solid #eee
+
+        &:hover 
+            box-shadow: 0 10px 30px rgba(0,0,0,.1)
+            border: 1px solid transparent
+            
+            .blog-card-thumb:before                
+                transform: rotate(55deg) translate(0px, 420px)
+
+        &-thumb 
+            position: relative
+            overflow: hidden
+
+            &:before 
+                content: ''
+                width: 130%
+                height: 100%
+
+                background-color: hsla(0, 0%, 100%, 0.5)
+
+                position: absolute
+                top: 0
+                left: 0
+
+                transform: rotate(55deg) translate(-80px, -300px)
+
+
+        &-image 
+            width: 100%
+
+        &-details 
+            padding: 25px
+
+        &-date,
+        &-description 
+            color: $gray
+            font-size: 14px    
+
+        &-date 
+            font-weight: 600
+            text-transform: uppercase    
+
+        &-title 
+            margin: 15px 0
+
+            font-size: 18px    
+            color: $sub_black
+
+        &-description 
+            margin-bottom: 20px    
+            line-height: 1.8
+
