@@ -43,6 +43,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "animated-scroll-to": "^2.0.8",
     "lodash": "^4.17.15"
   }
 }
