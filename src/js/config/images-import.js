@@ -27,16 +27,19 @@ import about_bg_image from '../../images/video-bg-shape.png';
 import slider_image_1 from '../../images/gallery1.jpg';
 import slider_image_2 from '../../images/gallery2.jpg';
 import slider_image_3 from '../../images/gallery3.jpg';
+import slider_image_4 from '../../images/gallery4.jpg';
 
 /* 
     Team images
 */
-import team_image from '../../images/reviewer-image.jpg';
+import team_image01 from '../../images/team-image01.jpg';
+import team_image02 from '../../images/team-image02.jpg';
 
 /* 
     Reviews images
 */
-import reviewer_avater from '../../images/about-author.jpg';
+import reviewer_avatar01 from '../../images/about-author.jpg';
+import reviewer_avatar02 from '../../images/about-author02.png';
 
 /* 
     Estimate images

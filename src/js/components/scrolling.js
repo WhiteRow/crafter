@@ -1,5 +1,5 @@
 import animateScrollTo from 'animated-scroll-to';
-import _ from 'lodash';
+import _ from 'lodash/core';
 
 export default function Scrolling () {
     const menuItems = document.querySelectorAll('.js-menu-item');
