@@ -15,17 +15,26 @@ function Main () {
         items: 3,
         mode: 'carousel',
         responsive : {
-            700: {
+            1200: {
                 items: 2,
+            },
+            800: {
+                items: 1,
             }
         }
     })
 
-    // const teamSlider = new Slider({
-    //     slider: 'team',
-    //     items: 1,
-    //     mode: 'carousel',
-    // })
+    const teamSlider = new Slider({
+        slider: 'team',
+        items: 1,
+        mode: 'carousel',
+    })
+
+    const reviewsSlider = new Slider({
+        slider: 'reviews',
+        items: 1,
+        mode: 'carousel',
+    })
 
     setTimeout(() => {
         document.body.classList.add('transitioned')

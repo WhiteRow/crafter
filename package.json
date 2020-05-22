@@ -43,9 +43,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
     "animated-scroll-to": "^2.0.8",
-    "flickity": "^2.2.1",
     "lodash": "^4.17.15",
     "tiny-slider": "^2.9.2"
   }
