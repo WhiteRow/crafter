@@ -209,8 +209,8 @@
 			<button class="primary-button">viev all works</button>
 		</div>
 
-		<div class="l-block portfolio-slider slider">
-			<div class="slider-wrapper l-grid ">
+		<div class="l-block portfolio-slider slider js-portfolio-slider">
+			<div class="slider-wrapper l-grid d-ai-c js-portfolio-slider-wrapper">
 				<div class="slider-item">
 					<img src="./images/gallery1.jpg" alt="" class="slider-image">
 					<div class="slider-hidden">
@@ -220,8 +220,8 @@
 
 						<p class="slider-text_small"><span class="highlight">Proper Guided Tour</span></p>
 						<div class="slider-text">
-								Santorini Island Dream <br>
-								Holiday and<br> Fun
+							Santorini Island Dream <br>
+							Holiday and<br> Fun
 						</div>
 					</div>
 				</div>
@@ -234,8 +234,8 @@
 
 						<p class="slider-text_small"><span class="highlight">Proper Guided Tour</span></p>
 						<div class="slider-text">
-								Santorini Island Dream <br>
-								Holiday and<br> Fun
+							Santorini Island Dream <br>
+							Holiday and<br> Fun
 						</div>
 					</div>
 				</div>
@@ -248,28 +248,44 @@
 
 						<p class="slider-text_small"><span class="highlight">Proper Guided Tour</span></p>
 						<div class="slider-text">
-								Santorini Island Dream <br>
-								Holiday and<br> Fun
+							Santorini Island Dream <br>
+							Holiday and<br> Fun
+						</div>
+					</div>
+				</div>
+				<div class="slider-item">
+					<img src="./images/gallery4.jpg" alt="" class="slider-image">
+					<div class="slider-hidden">
+						<svg class="slider-icon" role="button">
+							<use xlink:href="#link-icon"></use>
+						</svg>
+
+						<p class="slider-text_small"><span class="highlight">Proper Guided Tour</span></p>
+						<div class="slider-text">
+							Santorini Island Dream <br>
+							Holiday and<br> Fun
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="slider-controll">
-				<button class="slider-controll-prev" tabindex="0">
-						<div class="slider-controll-text">prev</div>
+			<div class="slider-controll js-portfolio-slider-control">
+				<button class="slider-controll-prev" data-controls="prev" aria-controls="customize"
+					tabindex="0">
+					<div class="slider-controll-text">prev</div>
 
 					<svg class="slider-controll-icon">
 						<use xlink:href="#arrow-icon"></use>
 					</svg>
 				</button>
-				<button class="slider-controll-next" tabindex="0">
+				<button class="slider-controll-next" data-controls="next" aria-controls="customize"
+					tabindex="0">
 					<div class="slider-controll-text">next</div>
-					
+
 					<svg class="slider-controll-icon">
 						<use xlink:href="#arrow-icon"></use>
 					</svg>
 				</button>
-				
+
 			</div>
 		</div>
 		<!-- /.portfolio-slider -->
@@ -280,9 +296,9 @@
 	<section class="l-wrapper team">
 		<div class="l-container l-grid">
 			<div class="l-block team-slider slider">
-				<div class="slider-item l-grid d-jc-sb d-ai-c">
+				<div class="l-grid d-jc-sb d-ai-c js-team-slider-wrapper">
 					<div class="team-coll">
-						<img src="./images/reviewer-image.jpg" alt="" class="slider-image">	
+						<img src="./images/reviewer-image.jpg" alt="" class="slider-image">
 						<div class="team-about l-grid d-jc-sb d-ai-c">
 							<div class="team-info">
 								<div class="team-name">Randy Weaver</div>
@@ -295,7 +311,7 @@
 											<use xlink:href="#facebook-icon">
 										</svg>
 									</a>
-									<a href="/" class="link">	
+									<a href="/" class="link">
 										<svg class="team-social-icon">
 											<use xlink:href="#twitter-icon">
 										</svg>
@@ -312,7 +328,7 @@
 											<use xlink:href="#behance-icon">
 										</svg>
 									</a>
-								</div>		
+								</div>
 							</div>
 						</div>
 					</div>
@@ -320,29 +336,30 @@
 					<div class="team-coll">
 						<div class="primary-title">Our Interactive <br>
 							Team Mates</div>
-						<p class="description">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						<p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore
 							magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
 						<button class="primary-button">View members</button>
 					</div>
 					<!-- /.team-coll-->
 				</div>
 				<!-- /.slider-item -->
-				<div class="slider-controll">
-					<button class="slider-controll-prev" tabindex="0">
-							<div class="slider-controll-text">prev</div>
-	
+				<div class="slider-controll js-team-slider-control">
+					<button class="slider-controll-prev" tabindex="0" data-controls="prev" aria-controls="customize">
+						<div class="slider-controll-text">prev</div>
+
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
-					<button class="slider-controll-next" tabindex="0">
+					<button class="slider-controll-next" tabindex="0" data-controls="next" aria-controls="customize">
 						<div class="slider-controll-text">next</div>
-						
+
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
-					
+
 				</div>
 			</div>
 			<!-- /.slider team-slider -->
@@ -354,7 +371,7 @@
 	<section class="l-wrapper reviews">
 		<div class="l-container">
 			<p class="overhead-title">We Are Providing these services</p>
-			<h2 class="primary-title centered-title">We Are 
+			<h2 class="primary-title centered-title">We Are
 				<span class="text-highlight">Crafted</span>. Design & Development
 				<span class="text-highlight">Services</span> Provider
 			</h2>
@@ -369,26 +386,28 @@
 						</div>
 						<!-- /.reviews-author-data -->
 					</div>
-					<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+						do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea
 						commodo consequat.</p>
 				</div>
 				<div class="slider-controll">
 					<button class="slider-controll-prev" tabindex="0">
-							<div class="slider-controll-text">prev</div>
-	
+						<div class="slider-controll-text">prev</div>
+
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
 					<button class="slider-controll-next" tabindex="0">
 						<div class="slider-controll-text">next</div>
-						
+
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
-					
+
 				</div>
 			</div>
 			<!-- /.slider reviews-slider -->
@@ -401,7 +420,8 @@
 		<div class="estimate-box">
 			<div class="l-container">
 				<h2 class="estimate-title">Get to Know Project Estimate?</h2>
-				<p class="description">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope.
+				<p class="description">There is a moment in the life of any aspiring astronomer that it is time to buy
+					that first telescope.
 					It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
 				<button class="primary-button estimate-button" tabindex="0">Get estimate for free</button>
 			</div>
@@ -421,8 +441,8 @@
 						From Our Blog
 					</h2>
 					<p class="description blog-description">
-						Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, 
-						Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna 
+						Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit,
+						Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna
 						Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud Exercitation.
 					</p>
 				</div>
@@ -437,7 +457,7 @@
 				<a href="#" class="blog-card">
 					<div class="blog-card-thumb">
 						<img src="./images/blog-image01.jpg" alt="" class="image blog-card-image">
-					</div>			
+					</div>
 					<div class="blog-card-details">
 						<date class="blog-card-date">25 JUNE, 2018 | BY MARK WIENS</date>
 						<h5 class="blog-card-title">
@@ -445,7 +465,7 @@
 							Becomes A Problem
 						</h5>
 						<div class="blog-card-description">
-							Computers have become ubiquitous in almost every facet of our 
+							Computers have become ubiquitous in almost every facet of our
 							lives. At work, desk jockeys spend hours in front of their desktops.
 						</div>
 					</div>
@@ -463,7 +483,7 @@
 							Becomes A Problem
 						</h5>
 						<div class="blog-card-description">
-							Computers have become ubiquitous in almost every facet of our 
+							Computers have become ubiquitous in almost every facet of our
 							lives. At work, desk jockeys spend hours in front of their desktops.
 						</div>
 					</div>
@@ -481,7 +501,7 @@
 							Becomes A Problem
 						</h5>
 						<div class="blog-card-description">
-							Computers have become ubiquitous in almost every facet of our 
+							Computers have become ubiquitous in almost every facet of our
 							lives. At work, desk jockeys spend hours in front of their desktops.
 						</div>
 					</div>
@@ -500,7 +520,7 @@
 				<div class="footer-col">
 					<h6 class="footer-col-title">About Crafted</h6>
 					<p class="footer-col-text">
-						The world has become so fast paced that people don’t want to stand 
+						The world has become so fast paced that people don’t want to stand
 						by reading a page of information, they would much rather look.
 					</p>
 				</div>
@@ -524,7 +544,7 @@
 				<div class="footer-col">
 					<h6 class="footer-col-title">Newsletter</h6>
 					<p class="footer-col-text">
-						For business professionals caught between 
+						For business professionals caught between
 						high OEM price mediocre print and graphic.
 					</p>
 					<form class="footer-form">
@@ -590,25 +610,38 @@
 				c-47.366,47.385-47.366,124.172,0,171.553c47.371,47.356,124.177,47.356,171.547,0l65.008-65.003
 				C246.109,360.336,219.437,357.723,194.708,348.104z" />
 	</symbol>
-	<symbol id="arrow-icon"viewBox="0 0 476.213 476.213">
-			<polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/>
+	<symbol id="arrow-icon" viewBox="0 0 476.213 476.213">
+		<polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 " />
 	</symbol>
 	<symbol id="facebook-icon" viewBox="0 0 430.113 430.114">
-		<path id="Facebook" d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+		<path id="Facebook"
+			d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
 		c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
-		c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+		c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" />
 	</symbol>
 	<symbol id="twitter-icon" viewBox="0 -47 512.00203 512">
-		<path d="m191.011719 419.042969c-22.140625 
+		<path
+			d="m191.011719 419.042969c-22.140625 
 		0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 
 		57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 
 		4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 
-		22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0"/>
+		22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0" />
 	</symbol>
 	<symbol id="dribbble-icon" viewBox="0 0 512 512">
-		<path d="m392.425781 114.992188c15.664063-17.457032 24.796875-35.734376 28-54.496094-44.292969-37.089844-101.269531-60.496094-163.425781-60.496094-32.09375 0-62.699219 6.210938-91.011719 17.078125 47.410157 47.5 87.058594 103.742187 118.070313 164.453125 45.695312-16.523438 83.78125-39.128906 108.367187-66.539062zm0 0"/><path d="m414.75 135.03125c-27.519531 30.671875-68.425781 55.617188-117.296875 73.746094 6.074219 13.320312 11.65625 26.917968 16.910156 40.691406 25.097657-5.398438 51.109375-8.46875 77.636719-8.46875 41.761719 0 82.332031 7.085938 119.742188 20.109375.035156-1.714844.257812-3.382813.257812-5.109375 0-66.035156-25.445312-126.09375-66.773438-171.429688-6.097656 17.570313-16.21875 34.574219-30.476562 50.460938zm0 0"/><path d="m5.847656 202.113281c31.886719 5.636719 67.214844 8.886719 101.152344 8.886719 52.609375 0 103.144531-7.46875 148.183594-20.296875-31.035156-59.628906-70.933594-114.507813-118.554688-160.402344-64.808594 34.855469-114.8125 97.925781-130.78125 171.8125zm0 0"/><path d="m509.15625 291.996094c-36.1875-13.621094-76.015625-20.996094-117.15625-20.996094-23.0625 0-45.710938 2.417969-67.554688 6.832031 22.175782 66.503907 35.007813 138.386719 37.199219 211.453125 78.015625-35.292968 135.042969-109.632812 147.511719-197.289062zm0 0"/><path d="m0 256c0 78.890625 38.027344 150.511719 94.472656 197.320312 5.980469-39.785156 23.917969-78.925781 53.132813-111.683593 34.75-38.960938 82.972656-68.136719 137.582031-84.789063-5.082031-13.109375-10.632812-25.960937-16.492188-38.632812-48.796874 14.472656-103.757812 22.785156-161.695312 22.785156-35.445312 0-72.332031-3.386719-105.769531-9.261719-.757813 7.996094-1.230469 16.074219-1.230469 24.261719zm0 0"/><path d="m170.003906 361.601562c-29.511718 33.09375-45.5 71.90625-47.550781 111.613282 39.113281 24.425781 85.132813 38.785156 134.546875 38.785156 25.980469 0 51.046875-3.953125 74.683594-11.207031-1.148438-74.6875-13.6875-148.125-36.484375-215.71875-49.902344 14.964843-93.796875 41.320312-125.195313 76.527343zm0 0"/>
+		<path
+			d="m392.425781 114.992188c15.664063-17.457032 24.796875-35.734376 28-54.496094-44.292969-37.089844-101.269531-60.496094-163.425781-60.496094-32.09375 0-62.699219 6.210938-91.011719 17.078125 47.410157 47.5 87.058594 103.742187 118.070313 164.453125 45.695312-16.523438 83.78125-39.128906 108.367187-66.539062zm0 0" />
+		<path
+			d="m414.75 135.03125c-27.519531 30.671875-68.425781 55.617188-117.296875 73.746094 6.074219 13.320312 11.65625 26.917968 16.910156 40.691406 25.097657-5.398438 51.109375-8.46875 77.636719-8.46875 41.761719 0 82.332031 7.085938 119.742188 20.109375.035156-1.714844.257812-3.382813.257812-5.109375 0-66.035156-25.445312-126.09375-66.773438-171.429688-6.097656 17.570313-16.21875 34.574219-30.476562 50.460938zm0 0" />
+		<path
+			d="m5.847656 202.113281c31.886719 5.636719 67.214844 8.886719 101.152344 8.886719 52.609375 0 103.144531-7.46875 148.183594-20.296875-31.035156-59.628906-70.933594-114.507813-118.554688-160.402344-64.808594 34.855469-114.8125 97.925781-130.78125 171.8125zm0 0" />
+		<path
+			d="m509.15625 291.996094c-36.1875-13.621094-76.015625-20.996094-117.15625-20.996094-23.0625 0-45.710938 2.417969-67.554688 6.832031 22.175782 66.503907 35.007813 138.386719 37.199219 211.453125 78.015625-35.292968 135.042969-109.632812 147.511719-197.289062zm0 0" />
+		<path
+			d="m0 256c0 78.890625 38.027344 150.511719 94.472656 197.320312 5.980469-39.785156 23.917969-78.925781 53.132813-111.683593 34.75-38.960938 82.972656-68.136719 137.582031-84.789063-5.082031-13.109375-10.632812-25.960937-16.492188-38.632812-48.796874 14.472656-103.757812 22.785156-161.695312 22.785156-35.445312 0-72.332031-3.386719-105.769531-9.261719-.757813 7.996094-1.230469 16.074219-1.230469 24.261719zm0 0" />
+		<path
+			d="m170.003906 361.601562c-29.511718 33.09375-45.5 71.90625-47.550781 111.613282 39.113281 24.425781 85.132813 38.785156 134.546875 38.785156 25.980469 0 51.046875-3.953125 74.683594-11.207031-1.148438-74.6875-13.6875-148.125-36.484375-215.71875-49.902344 14.964843-93.796875 41.320312-125.195313 76.527343zm0 0" />
 	</symbol>
-	<symbol id="behance-icon"  viewBox="0 0 310.023 310.023">
+	<symbol id="behance-icon" viewBox="0 0 310.023 310.023">
 		<path id="XMLID_793_" d="M239.741,102.348c-39.51,0-58.267,20.938-67.045,38.503c-5.865,11.738-8.088,23.385-8.93,30.63
 		c-1.781-7.023-4.973-14.658-10.674-20.684c-2.858-3.021-6.118-5.416-9.761-7.179c8.122-5.45,16.12-15.527,16.12-34.078
 		c0-17.188-5.884-31.373-17.015-41.021c-10.191-8.832-24.242-13.501-40.636-13.501H5c-2.762,0-5,2.239-5,5v186.042
@@ -622,9 +655,9 @@
 		 M214.211,158.28c2.653-7.219,9.506-18.679,26.259-18.679c7.065,0,12.627,1.989,16.529,5.912c3.861,3.882,5.541,9.025,6.271,12.767
 		H214.211z M52.663,168.28h49.165c1.495,0.011,14.604,0.683,14.604,20.546c0,12.991-5.367,18.907-17.402,19.177H52.663V168.28z
 		 M98.442,129.591H52.663V98.071l49.038-0.002c1.379,0.059,8.259,1.029,8.259,14.364C109.96,129.591,103.841,129.591,98.442,129.591
-		z"/>
-	<path id="XMLID_800_" d="M199.706,95.87h76.763c2.762,0,5-2.239,5-5V67.967c0-2.761-2.238-5-5-5h-76.763c-2.762,0-5,2.239-5,5
-		V90.87C194.706,93.631,196.945,95.87,199.706,95.87z"/>
+		z" />
+		<path id="XMLID_800_" d="M199.706,95.87h76.763c2.762,0,5-2.239,5-5V67.967c0-2.761-2.238-5-5-5h-76.763c-2.762,0-5,2.239-5,5
+		V90.87C194.706,93.631,196.945,95.87,199.706,95.87z" />
 	</symbol>
 </svg>
 
