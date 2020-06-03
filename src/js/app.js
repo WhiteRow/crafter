@@ -4,12 +4,14 @@ import './config/images-import.js'
 import Menu from './components/menu';
 import Scrolling from './components/scrolling';
 import Slider from './components/slider';
+import VideoModal from './components/modal/videoModal';
 
 
-function Main () {
+function App () {
     Menu();
     Scrolling();    
-
+    VideoModal();
+    
     const portfolioSlider = new Slider({
         slider: 'portfolio',
         items: 3,
@@ -41,4 +43,4 @@ function Main () {
     })
 }
 
-document.addEventListener('DOMContentLoaded', Main)
+document.addEventListener('DOMContentLoaded', App)
