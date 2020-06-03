@@ -71,7 +71,7 @@
 				<button tabindex="0" class="primary-button">More about us</button>
 
 				<div class="l-box l-grid d-ai-c watch-video">
-					<button class="watch-video-button">
+					<button class="watch-video-button js-toggle-modal-video">
 						<svg class="watch-video-button-icon">
 							<use xlink:href="#play-icon"></use>
 						</svg>
@@ -155,7 +155,7 @@
 		<div class="l-container l-grid d-jc-sb d-ai-c">
 			<div class="l-block video-block">
 				<img src="./images/video-bg.jpg" alt="" class="video-background">
-				<button class="watch-video-button">
+				<button class="watch-video-button js-toggle-modal-video">
 					<svg class="watch-video-button-icon">
 						<use xlink:href="#play-icon"></use>
 					</svg>
@@ -400,16 +400,14 @@
 				</div>
 				<!-- /.slider team-slider -->
 				<div class="slider-controll js-team-slider-control">
-					<button class="slider-controll-prev" tabindex="0" data-controls="prev"
-						aria-controls="customize">
+					<button class="slider-controll-prev" tabindex="0" data-controls="prev" aria-controls="customize">
 						<div class="slider-controll-text">prev</div>
 
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
-					<button class="slider-controll-next" tabindex="0" data-controls="next"
-						aria-controls="customize">
+					<button class="slider-controll-next" tabindex="0" data-controls="next" aria-controls="customize">
 						<div class="slider-controll-text">next</div>
 
 						<svg class="slider-controll-icon">
@@ -442,9 +440,11 @@
 							</div>
 							<!-- /.reviews-author-data -->
 						</div>
-						<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+						<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed
 							do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+							ut
 							aliquip ex ea
 							commodo consequat.</p>
 					</div>
@@ -457,25 +457,25 @@
 							</div>
 							<!-- /.reviews-author-data -->
 						</div>
-						<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+						<p class="reviews-review description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed
 							do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+							ut
 							aliquip ex ea
 							commodo consequat.</p>
 					</div>
 				</div>
 				<!-- /.js-reviews-slider-wrapper -->
 				<div class="slider-controll js-reviews-slider-control">
-					<button class="slider-controll-prev" tabindex="0" data-controls="prev"
-					aria-controls="customize">
+					<button class="slider-controll-prev" tabindex="0" data-controls="prev" aria-controls="customize">
 						<div class="slider-controll-text">prev</div>
 
 						<svg class="slider-controll-icon">
 							<use xlink:href="#arrow-icon"></use>
 						</svg>
 					</button>
-					<button class="slider-controll-next" tabindex="0" data-controls="next"
-					aria-controls="customize">
+					<button class="slider-controll-next" tabindex="0" data-controls="next" aria-controls="customize">
 						<div class="slider-controll-text">next</div>
 
 						<svg class="slider-controll-icon">
@@ -661,6 +661,25 @@
 		<!-- /.l-container -->
 	</footer>
 	<!-- /.l-footer-->
+	<div class="l-wrapper modal js-modal-bg"></div>
+	<!-- /.l-wrapper modal -->
+	<div class="l-wrapper video-modal l-grid d-jc-c d-ai-c js-modal-video">
+		<div class="video-modal-container">
+			<svg class="modal-close js-toggle-modal-video" role="button">
+				<use xlink:href="#close-icon"></use>
+			</svg>
+			<div class="video-modal-box">
+			<iframe
+				class="video-modal-video js-video"
+				frameborder="0" 
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen>
+			</iframe>
+			</div>
+		</div>
+		<!-- /.video-modal-container -->
+	</div>
+	<!-- /.l-wrapper video-modal -->
 </body>
 
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
@@ -733,6 +752,16 @@
 		z" />
 		<path id="XMLID_800_" d="M199.706,95.87h76.763c2.762,0,5-2.239,5-5V67.967c0-2.761-2.238-5-5-5h-76.763c-2.762,0-5,2.239-5,5
 		V90.87C194.706,93.631,196.945,95.87,199.706,95.87z" />
+	</symbol>
+	<symbol id="close-icon" viewBox="0 0 365.696 365.696">
+		<path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 
+		0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 
+		0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 
+		0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 
+		113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 
+		45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 
+		113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 
+		12.5-32.769531 0-45.25zm0 0" />
 	</symbol>
 </svg>
 
