@@ -1,4 +1,5 @@
 import { tns } from "../../../node_modules/tiny-slider/src/tiny-slider";
+import _ from 'lodash/core';
 
 export default function Slider(options) {
     
@@ -7,6 +8,7 @@ export default function Slider(options) {
         controlsContainer: `.js-${options.slider}-slider-control`,
         items: options.items,
         mode: options.mode,
+        mouseDrag: options.mouseDrag,
         loop: false,
         nav: false,  
         slideBy: 'page',

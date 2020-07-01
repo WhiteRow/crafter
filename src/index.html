@@ -68,10 +68,10 @@
 
 				<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<button tabindex="0" class="primary-button">More about us</button>
+				<button tabindex="0" class="primary-button js-show-about-sidebar">More about us</button>
 
 				<div class="l-box l-grid d-ai-c watch-video">
-					<button class="watch-video-button js-toggle-modal-video">
+					<button class="watch-video-button js-show-modal-video">
 						<svg class="watch-video-button-icon">
 							<use xlink:href="#play-icon"></use>
 						</svg>
@@ -155,7 +155,7 @@
 		<div class="l-container l-grid d-jc-sb d-ai-c">
 			<div class="l-block video-block">
 				<img src="./images/video-bg.jpg" alt="" class="video-background">
-				<button class="watch-video-button js-toggle-modal-video">
+				<button class="watch-video-button js-show-modal-video">
 					<svg class="watch-video-button-icon">
 						<use xlink:href="#play-icon"></use>
 					</svg>
@@ -206,7 +206,7 @@
 			<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				Ut enim ad minim veniam quis nostrud exercitation.</p>
-			<button class="primary-button">viev all works</button>
+			<button class="primary-button js-show-portfolio-sidebar">viev all works</button>
 		</div>
 
 		<div class="l-block portfolio-slider slider js-portfolio-slider">
@@ -255,6 +255,20 @@
 				</div>
 				<div class="slider-item">
 					<img src="./images/gallery4.jpg" alt="" class="slider-image">
+					<div class="slider-hidden">
+						<svg class="slider-icon" role="button">
+							<use xlink:href="#link-icon"></use>
+						</svg>
+
+						<p class="slider-text_small"><span class="highlight">Proper Guided Tour</span></p>
+						<div class="slider-text">
+							Santorini Island Dream <br>
+							Holiday and<br> Fun
+						</div>
+					</div>
+				</div>
+				<div class="slider-item">
+					<img src="./images/gallery5.png" alt="" class="slider-image">
 					<div class="slider-hidden">
 						<svg class="slider-icon" role="button">
 							<use xlink:href="#link-icon"></use>
@@ -665,21 +679,31 @@
 	<!-- /.l-wrapper modal -->
 	<div class="l-wrapper video-modal l-grid d-jc-c d-ai-c js-modal-video">
 		<div class="video-modal-container">
-			<svg class="modal-close js-toggle-modal-video" role="button">
+			<svg class="modal-close js-close-modal-video" role="button">
 				<use xlink:href="#close-icon"></use>
 			</svg>
 			<div class="video-modal-box">
-			<iframe
-				class="video-modal-video js-video"
-				frameborder="0" 
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-				allowfullscreen>
-			</iframe>
+				<iframe class="video-modal-video js-video" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				</iframe>
 			</div>
 		</div>
 		<!-- /.video-modal-container -->
 	</div>
 	<!-- /.l-wrapper video-modal -->
+	<div class="sidebar js-sidebar">
+		<svg class="sidebar-close js-close-sidebar" role="button">
+			<use xlink:href="#arrow-right"></use>
+		</svg>
+
+		<div class="loading js-sidebar-loading">
+			<div class="loading-circle"></div>
+			<div class="loading-circle"></div>
+			<div class="loading-circle"></div>
+		</div>
+		<!-- /.loading -->
+	</div>
+	<!-- /.sidebar -->
 </body>
 
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
@@ -762,6 +786,14 @@
 		45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 
 		113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 
 		12.5-32.769531 0-45.25zm0 0" />
+	</symbol>
+	<symbol id="arrow-right" viewBox="0 0 447.243 447.243">
+		<path d="M437.883,201.174c-0.008-0.008-0.017-0.017-0.025-0.025l-160-160c-12.552-12.441-32.813-12.351-45.254,0.201
+			c-0.983,0.992-1.9,2.047-2.746,3.159c-8.971,13.381-7.013,31.276,4.64,42.4l88.32,88.64c4.695,4.7,10.093,8.641,16,11.68
+			l9.76,5.12h-314.4c-16.099-0.677-30.349,10.332-33.76,26.08c-2.829,17.445,9.019,33.881,26.465,36.71
+			c1.83,0.297,3.682,0.434,5.535,0.41h315.52l-6.88,3.2c-6.713,3.135-12.83,7.412-18.08,12.64l-88.48,88.48
+			c-11.653,11.124-13.611,29.019-4.64,42.4c10.441,14.259,30.464,17.355,44.724,6.914c1.152-0.844,2.247-1.764,3.276-2.754l160-160
+			C450.361,233.939,450.372,213.678,437.883,201.174z" />
 	</symbol>
 </svg>
 

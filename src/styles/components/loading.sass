@@ -1,0 +1,49 @@
+.loading 
+    width: 100%
+    height: 100vh
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &.is-hidden 
+        display: none
+
+    &.is-animate 
+          .loading-circle 
+            animation-name: bounce
+            animation-duration: .5s
+            animation-direction: alternate
+            animation-iteration-count: infinite
+
+    &-circle
+        width: 20px
+        height: 20px
+
+        margin: 0 5px
+
+        display: inline-block
+        border-radius: 50%
+
+        background-color: #fff
+
+        animation-name: bounce
+        animation-duration: .5s
+        animation-direction: alternate
+        animation-iteration-count: infinite
+
+        &:nth-child(2)
+            animation-delay: .2s 
+        &:nth-child(3)
+            animation-delay: .3s
+
+    @keyframes bounce 
+        0% 
+            transform: translateY(0)
+
+        50% 
+
+            transform: translateY(5px)  
+
+        100% 
+            transform: translateY(-10px)          
