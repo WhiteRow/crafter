@@ -1,34 +1,40 @@
 import _ from 'lodash/core';
 
-export default function ModalCore (options, callback) {
+export default function ModalCore(options, callbackOnShow, callbackOnHidden) {
     const Elements = {};
 
-    const toggleModal = () => {
-        if (Elements._inside.modalBg.classList.contains(Elements._inside.modalBgClassShow)) {
-            Elements._inside.modalBg.classList.add(Elements._inside.modalBgClassHidden)
-        } else {
-            Elements._inside.modalBg.classList.remove(Elements._inside.modalBgClassHidden) 
+    const actionWithModal = (operation, callback) => {
+        // TODO: optimize it
+        if (operation === 'show') {
+            Elements._inside.modalBg.classList.add(Elements._inside.modalBgClassShow);
+            Elements._inside.body.classList.add(Elements._inside.bodyClass);
+            Elements.call.modal.classList.add(Elements.settings.modalShowClass)
         } 
+        else if (operation === 'hidden') {
+            Elements._inside.modalBg.classList.remove(Elements._inside.modalBgClassShow);
+            Elements._inside.body.classList.remove(Elements._inside.bodyClass);
+            Elements.call.modal.classList.remove(Elements.settings.modalShowClass)
+        } 
+        else {
+            console.error(`action ${operation} is not supported for modal work`)
+        }
 
-        Elements.call.modal.classList.toggle(Elements.settings.modalShowClass);
-        Elements._inside.modalBg.classList.toggle(Elements._inside.modalBgClassShow);
-        Elements._inside.body.classList.toggle(Elements._inside.bodyClass);
+        if (callback) callback()
     }
 
-    const bindItems = (item) => {
-        item.addEventListener('click', () => {
-            toggleModal();
-            if (callback) callback()
-        })
+    const bindItems = (item, action) => {
+        item.addEventListener('click', () => action())
     }
 
     Elements.call = {
         showButtons: document.querySelectorAll(options.showButtons),
+        closeButtons: document.querySelectorAll(options.closeButtons),
         modal: document.querySelector(options.modal),
     };
 
     Elements.settings = {
         modalShowClass: options.modalShowClass,
+        modalHiddenClass: options.modalHiddenClass,
     };
 
     Elements._inside = {
@@ -37,8 +43,8 @@ export default function ModalCore (options, callback) {
         modalBgClassHidden: 'is-hidden',
         body: document.body,
         bodyClass: 'non-scrolled',
-        elementsToHandle: {},
     }
 
-    _.each(Elements.call.showButtons, (button) => bindItems(button));
+    _.each(Elements.call.showButtons, (button) => bindItems(button, () => actionWithModal('show', callbackOnShow)));
+    _.each(Elements.call.closeButtons, (button) => bindItems(button, () => actionWithModal('hidden', callbackOnHidden)));
 }

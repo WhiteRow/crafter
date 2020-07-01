@@ -1,0 +1,62 @@
+.sidebar
+    width: 600px
+    height: 100vh
+    padding: 40px
+    
+    background-color: $off_black
+    box-shadow: 0px 20px 50px rgba(70, 129, 255, 0.1)
+
+    position: fixed
+    z-index: 4
+    right: 0
+    top: 0
+    
+    opacity: 0
+    transform: translateX(100%)
+
+    &.is-show 
+        opacity: 1
+        transform: translateX(0)
+
+    &-close 
+        width: 20px
+        height: 20px
+
+        fill: $white
+    
+    &-container 
+        padding: 60px 0
+
+        &.fadein 
+            animation-name: FadeIn
+            animation-duration: .3s
+            animation-timing-function: ease-in-out
+
+    &-title
+        margin-bottom: 20px
+
+        font-size: 28px
+        font-weight: 600
+        color: #fff
+
+    &-about 
+        &-image 
+            display: block
+            max-width: 400px
+            margin: 0 auto 40px auto
+
+        &-paragraph 
+            margin-bottom: 10px
+
+            font-size: 16px
+            font-weight: 400
+            color: rgba(255, 255, 255, 0.6)
+            line-height: 30px
+    
+    @keyframes FadeIn 
+        0% 
+            opacity: 0
+            transform: translateX(10%)
+        100% 
+            opacity: 1
+            transform: translateX(0)

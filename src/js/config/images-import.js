@@ -28,6 +28,7 @@ import slider_image_1 from '../../images/gallery1.jpg';
 import slider_image_2 from '../../images/gallery2.jpg';
 import slider_image_3 from '../../images/gallery3.jpg';
 import slider_image_4 from '../../images/gallery4.jpg';
+import slider_image_5 from '../../images/gallery5.png';
 
 /* 
     Team images
@@ -52,3 +53,8 @@ import estimate_shape from '../../images/bg-shape.png';
 import blog_image01 from '../../images/blog-image01.jpg';
 import blog_image02 from '../../images/blog-image02.jpg';
 import blog_image03 from '../../images/blog-image03.jpg';
+
+/* 
+    Siderbar images
+*/
+import sidebarAboutImage from '../../images/sidebar-about-image.png';
