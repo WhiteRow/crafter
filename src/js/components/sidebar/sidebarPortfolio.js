@@ -1,35 +1,35 @@
-import CreateElement from '../helpers/createElement';
-import sidebarCore from './sidebarCore';
+import _ from 'lodash/core';
+import CreateElement from '../helpers/createElement'; 
 
-export default function SidebarPortfolio () {
-    const render = (data) => {
-        const createP = (attrs, ...childs) => {
-            return CreateElement('p', attrs, ...childs)
-        }
+export default function SidebarPortfolio (data) {
+    let Projects = {};
 
-        const createDiv = (attrs, ...childs) => {
-            return CreateElement('div', attrs, ...childs)
-        }
+    _.each(data, (project) => Projects[`project${project.id}`] = project); 
 
-        const title = createDiv({
-            class: 'sidebar-title'
-        },
-        data.title);
+    // Main container
+    const sidebarBox = CreateElement('div', {
+        class: 'sidebar-rendered sidebar-portfolio fadein'
+    })
+    
+    for (let index = 1; index <= Object.keys(Projects).length; index++) {
 
-        const p1 = createP({
-            class: 'sidebar-about-paragraph'
-        }, data.p1)
+        const title = CreateElement('div', {
+            class: 'sidebar-project-title'
+        }, Projects[`project${index}`].title)
 
-        const p2 = createP({
-            class: 'sidebar-about-paragraph'
-        }, data.p2)
+        const image = CreateElement('img', {
+            class: 'sidebar-project-image',
+            src: Projects[`project${index}`].image
+        })
 
-        const sidebarContainer = createDiv({
-            class: 'sidebar-container fadein sidebar-portfolio js-container'
-        },title,p1,p2)
+        const project = CreateElement('a', {
+            class: 'sidebar-project',
+            href: '/',
+        }, title, image)
 
-        return sidebarContainer
+        sidebarBox.appendChild(project);
     }
 
-    const core2 =new sidebarCore('portfolio', render)
+    // End
+    return sidebarBox
 }

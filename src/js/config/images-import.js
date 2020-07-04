@@ -58,3 +58,11 @@ import blog_image03 from '../../images/blog-image03.jpg';
     Siderbar images
 */
 import sidebarAboutImage from '../../images/sidebar-about-image.png';
+
+/* 
+    Social media icons 
+*/
+import fbIcon from '../../images/facebook.png';
+import inIcon from '../../images/linkedin.png';
+import twIcon from '../../images/twitter.png';
+import drIcon from '../../images/dribbble.png';

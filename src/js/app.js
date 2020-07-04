@@ -4,16 +4,12 @@ import './config/images-import.js'
 import Menu from './components/menu';
 import Scrolling from './components/scrolling';
 import Slider from './components/slider';
-import VideoModal from './components/modal/videoModal';
-import SidebarAbout from './components/sidebar/sidebarAbout';
-import SidebarPortfolio from './components/sidebar/sidebarPortfolio';
-
+import ModalEnter from './components/modal/modalEnter';
+import SidebarEnter from './components/sidebar/sidebarEnter';
 function App () {
-    Menu();
-    Scrolling();    
-    VideoModal();
-    SidebarAbout();
-    SidebarPortfolio();
+    Scrolling();  
+    ModalEnter(); 
+    SidebarEnter();
     
     const portfolioSlider = new Slider({
         slider: 'portfolio',

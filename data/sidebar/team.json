@@ -1,0 +1,32 @@
+{
+
+    "teamMember1": {
+        "id": 1,
+        "avatar": "./images/team-image01.jpg",
+        "name": "Randy Weawer",
+        "position": "Team Lead",
+        "dscr": "Quis eiusmod sint incididunt ad. Dolor dolore amet velit excepteur in sunt voluptate.",
+        
+        "socialMedias" : {
+            "linkedin": "/",
+            "facebook": "/",
+            "twitter": "/"
+        }
+    }, 
+
+    "teamMember2": {
+        "id": 2,
+        "avatar": "./images/team-image02.jpg",
+        "name": "Alice In Chains",
+        "position": "Web Desinger",
+        "dscr": "Quis eiusmod sint incididunt ad. Dolor dolore amet velit excepteur in sunt voluptate deserunt aliqua ad incididunt ipsum. Et enim esse fugiat non.",
+
+        "socialMedias" : {
+            "linkedin": "/",
+            "facebook": "/",
+            "twitter": "/",
+            "dribbble": "/"
+        }
+    }
+
+}

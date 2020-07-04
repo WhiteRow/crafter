@@ -1,5 +1,29 @@
-{
-    "title": "Our works",
-    "p1": "Sunt exercitation nulla est est ad anim proident in ea culpa est dolore.Ex anim veniam sit sit culpa deserunt incididunt id nisi sint ea amet dolor.In tempor cupidatat dolore sunt anim voluptate proident.",
-    "p2": "Sunt exercitation nulla est est ad anim proident in ea culpa est dolore. Exanim veniam sit sit culpa deserunt incididunt id nisi sint ea amet dolor. In tempor cupidatat doloresunt anim voluptate proident."
+{   
+
+    "project1": {
+        "id": 1,
+        "title": "lorem Ipsum project 1",
+        "image": "./images/gallery1.jpg"
+    },
+    "project2": {
+        "id": 2,
+        "title": "lorem Ipsum project 2",
+        "image": "./images/gallery2.jpg"
+    },
+    "project3": {
+        "id": 3,
+        "title": "lorem Ipsum project 3",
+        "image": "./images/gallery3.jpg"
+    },
+    "project4": {
+        "id": 4,
+        "title": "lorem Ipsum project 4",
+        "image": "./images/gallery4.jpg"
+    },
+    "project5": {
+        "id": 5,
+        "title": "lorem Ipsum project 5",
+        "image": "./images/gallery5.png"
+    }
+
 }

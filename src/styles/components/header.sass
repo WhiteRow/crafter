@@ -2,6 +2,10 @@
     padding: 10px 0
     position: fixed
     z-index: 4
+
+    &.is-important
+        z-index: 6
+
     .toggle-button
         padding: 10px 10px
         border: 0px solid $white
@@ -16,13 +20,13 @@
             &:not(:last-child)
                 margin-bottom: 8px
 
-    /* State */
-    .toggle-button.is-active 
-        transform: translateX(90%)
-        .toggle-button-line 
-            &:first-child 
-                opacity: 0
-            &:nth-child(2) 
-                transform: rotate(45deg)
-            &:last-child 
-                transform: rotate(-45deg) translate(7px,-8px)
+        /* State */
+        &.is-show
+            transform: translateX(90%)
+            .toggle-button-line 
+                &:first-child 
+                    opacity: 0
+                &:nth-child(2) 
+                    transform: rotate(45deg)
+                &:last-child 
+                    transform: rotate(-45deg) translate(7px,-8px)
