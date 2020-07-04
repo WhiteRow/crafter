@@ -6,6 +6,8 @@
     background-color: $off_black
     box-shadow: 0px 20px 50px rgba(70, 129, 255, 0.1)
 
+    overflow: auto
+
     position: fixed
     z-index: 4
     right: 0
@@ -13,6 +15,17 @@
     
     opacity: 0
     transform: translateX(100%)
+
+    &::-webkit-scrollbar-track
+        background-color: transparent
+        
+    &::-webkit-scrollbar  
+        background-color: transparent
+        width: 8px
+
+    &::-webkit-scrollbar-thumb
+        background-color: hsla(0, 0%, 0%, 0)
+
 
     &.is-show 
         opacity: 1
@@ -27,6 +40,7 @@
     &-container 
         padding: 60px 0
 
+    &-rendered
         &.fadein 
             animation-name: FadeIn
             animation-duration: .3s
@@ -40,6 +54,7 @@
         color: #fff
 
     &-about 
+
         &-image 
             display: block
             max-width: 400px
@@ -52,7 +67,158 @@
             font-weight: 400
             color: rgba(255, 255, 255, 0.6)
             line-height: 30px
+
+    &-portfolio 
+
+        .sidebar-project
+            width: 100%
+            height: 170px
+
+            display: block
+
+            &:not(:last-child)
+                margin-bottom: 60px
+
+            position: relative
+
+            &:before 
+                content: ''
+
+                width: 100%
+                height: 100%
+
+                background-color: rgba(255, 255, 255, 0.4)
+
+                position: absolute
+                top: 0
+                left: 0
+
+            &:first-child 
+                .sidebar-project-image 
+                    object-position: bottom    
+
+            &:hover:before 
+                background-color: rgba(255, 255, 255, 0.1)
+
+            &:hover 
+                .sidebar-project-title
+                    transform: translate(-50%, -100%) scale(.95)
+            
+            &-title 
+                width: 100%
+
+                text-align: center
+                font-size: 28px
+                color: $off_black
+                font-weight: 600
+
+                position: absolute
+                top: 50%
+                left: 50%
+
+                transform: translate(-50%, -50%)
+            
+            &-image
+                width: 100%
+                height: 100%
+
+                object-fit: cover
     
+    &-team
+        &-member
+            display: flex
+            
+            &:not(:last-child)
+                margin-bottom: 40px
+
+            &-avatar
+                width: 100px
+                height: 100px
+
+                border-radius: 50%
+                object-fit: cover
+
+            &-info 
+                margin-top: 20px
+                margin-left: 20px    
+
+            &-name,
+            &-position,
+            &-description
+                color: $white 
+
+            &-name 
+                font-size: 21px
+                font-weight: 600    
+
+            &-position
+                margin-top: 5px
+
+                font-size: 18px
+                opacity: .8
+
+            &-description
+                margin-top: 15px
+                font-size: 14px
+                font-weight: 400
+                line-height: 1.8
+                opacity: .6    
+
+            &-social
+                display: flex
+                margin-top: 15px    
+
+                &-link 
+                    $padding: 7px
+                    $iconSize: 20px
+
+                    width: calc(#{$iconSize + $padding})
+                    height: calc(#{$iconSize + $padding})
+
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    padding: $padding
+                    margin-right: 15px
+
+                    background-color: #fff
+                    border-radius: 50%
+
+                    &:hover
+                        opacity: .8
+                        animation-name: iconBounce
+                        animation-duration: .6s
+                        animation-timing-function: ease-in-out 
+
+                    &:active 
+                        opacity: 1  
+
+                &-icon
+                    width: 100%
+                    height: 100%
+
+                    fill: $off_black
+                    opacity: .8
+
+
+    @keyframes iconBounce
+        0% 
+            transform: translateY(0%)
+        
+        25% 
+            transform: translateY(-6%)
+
+        50% 
+            transform: translateY(0)
+
+        75% 
+            transform: translateY(-3%)
+
+        100%  
+            transform: translateY(0%) 
+
+                    
     @keyframes FadeIn 
         0% 
             opacity: 0

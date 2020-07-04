@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div class="l-header">
+	<div class="l-header js-header">
 		<div class="l-container">
 			<button class="toggle-button js-burger" tabindex="0" title="Menu-bar">
 				<div class="toggle-button-line"></div>
@@ -68,10 +68,10 @@
 
 				<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<button tabindex="0" class="primary-button js-show-about-sidebar">More about us</button>
+				<button tabindex="0" class="primary-button js-show-sidebar js-render-about">More about us</button>
 
 				<div class="l-box l-grid d-ai-c watch-video">
-					<button class="watch-video-button js-show-modal-video">
+					<button class="watch-video-button js-show-video">
 						<svg class="watch-video-button-icon">
 							<use xlink:href="#play-icon"></use>
 						</svg>
@@ -155,7 +155,7 @@
 		<div class="l-container l-grid d-jc-sb d-ai-c">
 			<div class="l-block video-block">
 				<img src="./images/video-bg.jpg" alt="" class="video-background">
-				<button class="watch-video-button js-show-modal-video">
+				<button class="watch-video-button js-show-video">
 					<svg class="watch-video-button-icon">
 						<use xlink:href="#play-icon"></use>
 					</svg>
@@ -206,7 +206,7 @@
 			<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				Ut enim ad minim veniam quis nostrud exercitation.</p>
-			<button class="primary-button js-show-portfolio-sidebar">viev all works</button>
+			<button class="primary-button js-show-sidebar js-render-portfolio">viev all works</button>
 		</div>
 
 		<div class="l-block portfolio-slider slider js-portfolio-slider">
@@ -354,7 +354,7 @@
 									eiusmod
 									tempor incididunt ut labore et dolore
 									magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
-								<button class="primary-button">View members</button>
+								<button class="primary-button js-show-sidebar js-render-team">View members</button>
 							</div>
 							<!-- /.team-coll-->
 						</div>
@@ -677,9 +677,9 @@
 	<!-- /.l-footer-->
 	<div class="l-wrapper modal js-modal-bg"></div>
 	<!-- /.l-wrapper modal -->
-	<div class="l-wrapper video-modal l-grid d-jc-c d-ai-c js-modal-video">
+	<div class="l-wrapper video-modal js-modal-video l-grid d-jc-c d-ai-c">
 		<div class="video-modal-container">
-			<svg class="modal-close js-close-modal-video" role="button">
+			<svg class="modal-close js-close" role="button">
 				<use xlink:href="#close-icon"></use>
 			</svg>
 			<div class="video-modal-box">
@@ -692,7 +692,7 @@
 	</div>
 	<!-- /.l-wrapper video-modal -->
 	<div class="sidebar js-sidebar">
-		<svg class="sidebar-close js-close-sidebar" role="button">
+		<svg class="sidebar-close" role="button">
 			<use xlink:href="#arrow-right"></use>
 		</svg>
 
@@ -702,6 +702,11 @@
 			<div class="loading-circle"></div>
 		</div>
 		<!-- /.loading -->
+
+		<div class="sidebar-container js-sidebar-container">
+
+		</div>
+		<!-- /.sidebar-container js-sidebar-container -->
 	</div>
 	<!-- /.sidebar -->
 </body>
@@ -776,6 +781,17 @@
 		z" />
 		<path id="XMLID_800_" d="M199.706,95.87h76.763c2.762,0,5-2.239,5-5V67.967c0-2.761-2.238-5-5-5h-76.763c-2.762,0-5,2.239-5,5
 		V90.87C194.706,93.631,196.945,95.87,199.706,95.87z" />
+	</symbol>
+	<symbol id="linkedin-icon" viewBox="0 0 24 24">
+		<path
+		d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 
+		0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 
+		2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z" />
+		<path d="m.396 7.977h4.976v16.023h-4.976z" />
+		<path
+			d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 
+			2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z" />
+		
 	</symbol>
 	<symbol id="close-icon" viewBox="0 0 365.696 365.696">
 		<path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 

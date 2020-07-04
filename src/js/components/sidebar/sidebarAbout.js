@@ -1,8 +1,6 @@
-import CreateElement from '../helpers/createElement';
-import sidebarCore from './sidebarCore';
+import CreateElement from '../helpers/createElement'; 
 
-export default function SidebarAbout () {
-    const render = (data) => {
+export default function SidebarAbout (data) {
         const createP = (attrs, ...childs) => {
             return CreateElement('p', attrs, ...childs)
         }
@@ -30,11 +28,8 @@ export default function SidebarAbout () {
         }, data.p2)
 
         const sidebarContainer = createDiv({
-            class: 'sidebar-container fadein sidebar-about js-sidebar-container'
+            class: 'sidebar-rendered sidebar-about fadein'
         },title,image,p1,p2)
 
         return sidebarContainer
-    }
-
-    const core = new sidebarCore('about', render)    
 }
