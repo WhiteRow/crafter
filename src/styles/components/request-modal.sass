@@ -1,0 +1,138 @@
+.request-modal 
+    width: 100%
+    max-width: 550px
+    
+    margin: 0 auto
+
+    text-align: right
+
+    &-box
+        padding: 60px 50px
+
+        background-color: $off_black
+
+        text-align: left
+        color: $white
+
+    &-title
+        margin-bottom: 20px
+
+        font-size: 24px
+        font-weight: 600    
+
+    &-description 
+        margin-bottom: 40px
+
+        font-size: 16px
+        font-weight: 400
+        line-height: 1.8
+
+        opacity: .6
+
+    &-form
+        &-field
+            margin-bottom: 20px
+            position: relative
+
+        &-label
+            display: block
+            
+            margin-bottom: 15px
+
+            opacity: .6
+
+        &-input 
+            width: 100%
+            padding: 15px 60px
+
+            background-color: transparent    
+            border: 1px solid rgba(255, 255, 255, 0.2)
+
+            font-size: 14px
+            color: #fff
+
+            &:-webkit-autofill-selected
+                background: transparent
+
+        &-icon
+            width: 20px
+            height: 20px
+
+            fill: $white
+
+            position: absolute
+            bottom: 15px
+            left: 25px
+
+        &-checkbox
+            position: relative 
+
+            &:hover &-icon
+                background-color: rgba(255, 255, 255, 0.2)
+
+            &:active &-icon
+                background-color: rgba(255, 255, 255, 0.4)    
+
+            &-hidden,
+            &-icon    
+                position: absolute
+                left: 0
+
+            &-icon
+                width: 20px
+                height: 20px
+
+                fill: $primary_color      
+
+                &.icon-blank 
+                    opacity: 0    
+
+            &-hidden
+                width: 25px
+                height: 25px
+
+                opacity: 0
+                z-index: 2
+
+                cursor: pointer
+
+                &:checked~.icon-empty
+                    opacity: 0
+                    
+                &:checked~.icon-blank
+                    opacity: 1
+
+        &-terms
+
+            &-label 
+                padding-left: 35px
+                margin-top: -5px
+
+                cursor: pointer
+
+            &-text 
+                display: inline-block
+                
+                font-size: 16px
+                font-weight: 400
+                line-height: 2
+
+        &-button
+            width: 100%
+
+            margin-top: 35px
+            padding: 12px 20px
+
+            border: 0
+            background-color: $primary_color
+
+            font-size: 16px
+            font-weight: 600
+            text-transform: uppercase
+            color: $white
+
+            &:hover
+                background-color: rgb(24, 129, 242)
+
+            &:active
+                opacity: .8    

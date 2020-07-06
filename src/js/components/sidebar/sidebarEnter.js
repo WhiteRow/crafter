@@ -32,7 +32,7 @@ export default function SidebarEnter () {
 
             setTimeout(() => {
                 LoadData(sidebar)
-                    .then(data => {
+                    .then(data => {                        
                         Elements.rendered[sidebar] = func(data);
                         Elements.general.container.appendChild(Elements.rendered[sidebar]); 
                         Elements.general.loading.classList.add('is-hidden')    

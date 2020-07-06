@@ -24,7 +24,7 @@ export default function ModalConfig (options, showCallback, closeCallback) {
 
     this.bindItems = () => {
         const showEvent = this.addEvent(() => this.modalToggle(showCallback), Privates.call.show);
-        const closeEvent = this.addEvent(() => this.modalToggle(closeCallback), Privates.call.modal);
+        const closeEvent = this.addEvent(() => this.modalToggle(closeCallback), Privates.call.close);
     }
  
     Privates = options;
