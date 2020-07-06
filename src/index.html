@@ -512,7 +512,8 @@
 				<p class="description">There is a moment in the life of any aspiring astronomer that it is time to buy
 					that first telescope.
 					It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
-				<button class="primary-button estimate-button" tabindex="0">Get estimate for free</button>
+				<button class="primary-button estimate-button js-show-request" tabindex="0">Get estimate for
+					free</button>
 			</div>
 			<!-- /.l-container -->
 			<img src="./images/bg-shape.png" alt="" class="image estimate-image">
@@ -675,24 +676,116 @@
 		<!-- /.l-container -->
 	</footer>
 	<!-- /.l-footer-->
-	<div class="l-wrapper modal js-modal-bg"></div>
+	<div class="l-wrapper modal modal-bg js-modal-bg"></div>
 	<!-- /.l-wrapper modal -->
-	<div class="l-wrapper video-modal js-modal-video l-grid d-jc-c d-ai-c">
-		<div class="video-modal-container">
-			<svg class="modal-close js-close" role="button">
-				<use xlink:href="#close-icon"></use>
-			</svg>
-			<div class="video-modal-box">
-				<iframe class="video-modal-video js-video" frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-				</iframe>
-			</div>
+	<div class="modal video-modal modal-center js-modal-video">
+		<svg class="modal-close js-close-video" role="button">
+			<use xlink:href="#close-icon"></use>
+		</svg>
+		<div class="video-modal-box">
+			<iframe class="video-modal-video js-video" frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
 		</div>
-		<!-- /.video-modal-container -->
 	</div>
 	<!-- /.l-wrapper video-modal -->
+	<div class="modal request-modal modal-center js-modal-request">
+		<svg class="modal-close js-close-request" role="button">
+			<use xlink:href="#close-icon"></use>
+		</svg>
+
+		<div class="request-modal-box">
+			<div class="request-modal-title">Get estimate to Your project</div>
+			<p class="request-modal-description">
+				Sunt exercitation nulla est est ad anim proident in ea culpa est dolore.
+			</p>
+			<form action="" class="request-modal-form js-request-form">
+				<div class="request-modal-form-field">
+					<label for="name" class="request-modal-form-label">Your name</label>
+					<input 
+						id="name" 
+						type="text" 
+						name="name"
+						placeholder="George" 
+						autocorrect="off"
+						required 
+						class="request-modal-form-input js-request-field">
+					<svg class="request-modal-form-icon">
+						<use xlink:href="#form-user"></use>
+					</svg>
+				</div>
+				<!-- /.request-modal-form-field -->
+				<div class="request-modal-form-field">
+					<label for="email" class="request-modal-form-label">Your email</label>
+					<input 
+						id="email" 
+						type="email" 
+						name="email"
+						placeholder="george@crafter.com" 
+						autocorrect="off"
+						autocapitalize="off"
+						required
+						class="request-modal-form-input js-request-field">
+					<svg class="request-modal-form-icon">
+						<use xlink:href="#form-mail"></use>
+					</svg>
+				</div>
+				<!-- /.request-modal-form-field -->
+				<div class="request-modal-form-field">
+					<label for="phone" class="request-modal-form-label">Your phone</label>
+					<input 
+						id="phone" 
+						type="tel" 
+						name="phone"
+						placeholder="9 999 99 99 99" 
+						autocorrect="off"
+						class="request-modal-form-input js-request-field">
+					<svg class="request-modal-form-icon">
+						<use xlink:href="#form-phone"></use>
+					</svg>
+				</div>
+				<!-- /.request-modal-form-field -->
+
+				<div class="request-modal-form-terms l-grid d-ai-fs">
+					<div class="request-modal-form-checkbox">
+						<input type="checkbox" required id="terms-checkbox" class="request-modal-form-checkbox-hidden">
+						<svg class="request-modal-form-checkbox-icon icon-empty">
+							<use xlink:href="#checkox-icon"></use>
+						</svg>
+						<svg class="request-modal-form-checkbox-icon icon-blank">
+							<use xlink:href="#checkox-icon-blank"></use>
+						</svg>
+					</div>
+					<!-- /.request-modal-form-terms-checkbox -->
+					<label for="terms-checkbox" class="request-modal-form-terms-label">
+						<p class="request-modal-form-terms-text">I agree to all statements included in</p>
+						<a href="/" class="link ">Terms of Use</a>
+					</label>
+				</div>
+				<!-- /.request-modal-form-terms -->
+
+				<button class="request-modal-form-button" type="submit">Get estimate</button>
+			</form>
+			<!-- /.request-modal-form -->
+		</div>
+		<!-- /.request-modal-box -->
+	</div>
+	<!-- /.l-wrapper request-modal js-request-modal -->
+
+	<div class="modal modal-center success-modal js-success">
+		<svg class="modal-close js-close-success" role="button">
+			<use xlink:href="#close-icon"></use>
+		</svg>
+
+		<div class="success-modal-box">
+			<div class="success-modal-title js-success-title"></div>
+		</div>
+		<!-- /.success-modal-box -->
+	</div>
+	<!-- /.modal success-modal js-success -->
+
 	<div class="sidebar js-sidebar">
-		<svg class="sidebar-close" role="button">
+		<svg class="sidebar-close js-close-sidebar" role="button">
 			<use xlink:href="#arrow-right"></use>
 		</svg>
 
@@ -783,15 +876,13 @@
 		V90.87C194.706,93.631,196.945,95.87,199.706,95.87z" />
 	</symbol>
 	<symbol id="linkedin-icon" viewBox="0 0 24 24">
-		<path
-		d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 
+		<path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 
 		0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 
 		2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z" />
 		<path d="m.396 7.977h4.976v16.023h-4.976z" />
-		<path
-			d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 
+		<path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 
 			2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z" />
-		
+
 	</symbol>
 	<symbol id="close-icon" viewBox="0 0 365.696 365.696">
 		<path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 
@@ -810,6 +901,46 @@
 			c1.83,0.297,3.682,0.434,5.535,0.41h315.52l-6.88,3.2c-6.713,3.135-12.83,7.412-18.08,12.64l-88.48,88.48
 			c-11.653,11.124-13.611,29.019-4.64,42.4c10.441,14.259,30.464,17.355,44.724,6.914c1.152-0.844,2.247-1.764,3.276-2.754l160-160
 			C450.361,233.939,450.372,213.678,437.883,201.174z" />
+	</symbol>
+	<symbol id="form-user" viewBox="0 0 460.8 460.8">
+		<path d="M230.432,0c-65.829,0-119.641,53.812-119.641,119.641s53.812,119.641,119.641,119.641s119.641-53.812,119.641-119.641
+			S296.261,0,230.432,0z" />
+		<path d="M435.755,334.89c-3.135-7.837-7.314-15.151-12.016-21.943c-24.033-35.527-61.126-59.037-102.922-64.784
+		c-5.224-0.522-10.971,0.522-15.151,3.657c-21.943,16.196-48.065,24.555-75.233,24.555s-53.29-8.359-75.233-24.555
+		c-4.18-3.135-9.927-4.702-15.151-3.657c-41.796,5.747-79.412,29.257-102.922,64.784c-4.702,6.792-8.882,14.629-12.016,21.943
+		c-1.567,3.135-1.045,6.792,0.522,9.927c4.18,7.314,9.404,14.629,14.106,20.898c7.314,9.927,15.151,18.808,24.033,27.167
+		c7.314,7.314,15.673,14.106,24.033,20.898c41.273,30.825,90.906,47.02,142.106,47.02s100.833-16.196,142.106-47.02
+		c8.359-6.269,16.718-13.584,24.033-20.898c8.359-8.359,16.718-17.241,24.033-27.167c5.224-6.792,9.927-13.584,14.106-20.898
+		C436.8,341.682,437.322,338.024,435.755,334.89z" />
+	</symbol>
+	<symbol id="form-mail" viewBox="0 0 512 512">
+		<path d="M467,61H45c-6.927,0-13.412,1.703-19.279,4.51L255,294.789l51.389-49.387c0,0,0.004-0.005,0.005-0.007
+			c0.001-0.002,0.005-0.004,0.005-0.004L486.286,65.514C480.418,62.705,473.929,61,467,61z" />
+		<path d="M507.496,86.728L338.213,256.002L507.49,425.279c2.807-5.867,4.51-12.352,4.51-19.279V106
+		C512,99.077,510.301,92.593,507.496,86.728z" />
+		<path
+			d="M4.51,86.721C1.703,92.588,0,99.073,0,106v300c0,6.923,1.701,13.409,4.506,19.274L173.789,256L4.51,86.721z" />
+		<path d="M317.002,277.213l-51.396,49.393c-2.93,2.93-6.768,4.395-10.605,4.395s-7.676-1.465-10.605-4.395L195,277.211
+		L25.714,446.486C31.582,449.295,38.071,451,45,451h422c6.927,0,13.412-1.703,19.279-4.51L317.002,277.213z" />
+	</symbol>
+	<symbol id="form-phone" viewBox="0 0 384 384">
+		<path
+			d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.719-3.656-23.896-0.302-30.438,6.417l-43.177,32.594
+			c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448
+			c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.813C13.823,0,0,13.823,0,30.813
+			C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z" />
+	</symbol>
+	<symbol id="checkox-icon-blank" viewBox="0 0 459 459">
+		<g id="check-box-outline">
+			<path d="M124.95,181.05l-35.7,35.7L204,331.5l255-255l-35.7-35.7L204,260.1L124.95,181.05z M408,408H51V51h255V0H51
+				C22.95,0,0,22.95,0,51v357c0,28.05,22.95,51,51,51h357c28.05,0,51-22.95,51-51V204h-51V408z" />
+		</g>
+	</symbol>
+	<symbol id="checkox-icon" viewBox="0 0 459 459">
+		<g id="check-box-outline-blank">
+			<path d="M408,51v357H51V51H408 M408,0H51C22.95,0,0,22.95,0,51v357c0,28.05,22.95,51,51,51h357c28.05,0,51-22.95,51-51V51
+				C459,22.95,436.05,0,408,0L408,0z" />
+		</g>
 	</symbol>
 </svg>
 

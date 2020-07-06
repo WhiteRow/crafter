@@ -1,26 +1,30 @@
 .modal 
-    height: 100vh
     padding: 40px 0
-    background-color: hsla(0, 0%, 4%, 0.8)
 
     position: fixed
-    top: 0
-    left: 0
 
     opacity: 0
     z-index: -1
-    
+
+    &.modal-bg
+        height: 100vh
+        background-color: hsla(0, 0%, 4%, 0.8)
+
+        top: 0
+        left: 0
+
+    &.modal-center
+        top: 50%
+        left: 50%
+
+        transform: translate(-50%, -50%)
+   
     &.is-show
         opacity: 1
         z-index: 4
-        animation-name: fadeIn
-        animation-duration: .4s
-        animation-timing-function: ease-in-out
-
-    &.is-hidden 
-        animation-name: fadeOut
-        animation-duration: .4s
-        animation-timing-function: ease-in-out
+        // animation-name: fadeIn
+        // animation-duration: .4s
+        // animation-timing-function: ease-in-out
 
     &-close 
         width: 18px
@@ -36,22 +40,8 @@
         0%
             opacity: 0
             z-index: 0
-        25%
-            opacity: .3
-            z-index: 4 
-        50%
-            opacity: .6
         100%
-            opacity: 1
-
-    @keyframes fadeOut
-        0%
             opacity: 1
             z-index: 4
-        25%
-            opacity: .6
-        50%
-            opacity: 0
-        100%
-            z-index: 0
+
                     

@@ -6,6 +6,8 @@ import Scrolling from './components/scrolling';
 import Slider from './components/slider';
 import ModalEnter from './components/modal/modalEnter';
 import SidebarEnter from './components/sidebar/sidebarEnter';
+import formHandler from './components/formHandler';
+
 function App () {
     Scrolling();  
     ModalEnter(); 
@@ -40,6 +42,18 @@ function App () {
         items: 1,
         mode: 'carousel',
         mouseDrag: true,
+    })
+
+    const requestForm = new formHandler({
+        form: '.js-request-form',
+        fields: '.js-request-field',
+        url: 'https://jsonplaceholder.typicode.com/posts'
+    }, () => {
+        document.querySelector('.js-modal-request').classList.remove('is-show');
+        document.querySelector('.js-success-title').innerText = 'Thanks for your request!'
+        setTimeout(() => {
+            document.querySelector('.js-success').classList.add('is-show');
+        }, 300)
     })
 
     setTimeout(() => {
