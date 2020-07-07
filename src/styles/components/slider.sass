@@ -2,7 +2,11 @@
 
 .slider 
     overflow: hidden 
-    cursor: grab  
+    cursor: grab
+
+    &:active 
+        cursor: grabbing
+
     &-item 
         position: relative
         user-select: none

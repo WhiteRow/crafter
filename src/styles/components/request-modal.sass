@@ -14,6 +14,7 @@
         text-align: left
         color: $white
 
+
     &-title
         margin-bottom: 20px
 
@@ -51,8 +52,12 @@
             font-size: 14px
             color: #fff
 
-            &:-webkit-autofill-selected
-                background: transparent
+            &::placeholder 
+                color: $white
+
+            &:focus
+                outline: 1px solid $primary_color
+                background-color: $sub_black    
 
         &-icon
             width: 20px
@@ -112,7 +117,7 @@
 
             &-text 
                 display: inline-block
-                
+
                 font-size: 16px
                 font-weight: 400
                 line-height: 2
