@@ -1,23 +1,26 @@
 import "../styles/app.sass";
 import './config/images-import.js'
 
-import Menu from './components/menu';
+import Lazyload from './components/lazyload';
 import Scrolling from './components/scrolling';
 import Slider from './components/slider';
 import ModalEnter from './components/modal/modalEnter';
 import SidebarEnter from './components/sidebar/sidebarEnter';
 import formHandler from './components/formHandler';
 
-function App () {
-    Scrolling();  
-    ModalEnter(); 
+function App() {
+    Lazyload();
+    Scrolling();
+    ModalEnter();
     SidebarEnter();
-    
+
+    // TODO: image sizer on node js
+
     const portfolioSlider = new Slider({
         slider: 'portfolio',
         mode: 'carousel',
         mouseDrag: true,
-        responsive : {
+        responsive: {
             1600: {
                 items: 3,
             },
@@ -51,6 +54,19 @@ function App () {
     }, () => {
         document.querySelector('.js-modal-request').classList.remove('is-show');
         document.querySelector('.js-success-title').innerText = 'Thanks for your request!'
+        setTimeout(() => {
+            document.querySelector('.js-success').classList.add('is-show');
+        }, 300)
+    })
+
+    const mailingForm = new formHandler({
+        form: '.js-mailing-form',
+        fields: '.js-mailing-field',
+        url: 'https://jsonplaceholder.typicode.com/posts'
+    }, () => {
+        document.body.classList.add('is-non-scrolled')
+        document.querySelector('.js-modal-bg').classList.add('is-show');
+        document.querySelector('.js-success-title').innerText = 'Thanks for your subscribe!'
         setTimeout(() => {
             document.querySelector('.js-success').classList.add('is-show');
         }, 300)

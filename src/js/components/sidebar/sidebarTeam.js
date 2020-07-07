@@ -31,7 +31,7 @@ export default function SidebarTeam (data) {
             // }, iconType)
 
             const icon = CreateElement('img', {
-                class: 'sidebar-team-member-social-icon',
+                class: 'sidebar-team-member-social-icon image',
                 src: `./images/${socialMedia}.png`
             })
 
@@ -52,7 +52,7 @@ export default function SidebarTeam (data) {
 
             // image
             const sidebarMemberImage = CreateElement('img', {
-                class: 'sidebar-team-member-avatar',
+                class: 'sidebar-team-member-avatar image',
                 src: Members[member].avatar
             })
             

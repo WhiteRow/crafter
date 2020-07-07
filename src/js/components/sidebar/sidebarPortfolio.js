@@ -18,13 +18,12 @@ export default function SidebarPortfolio (data) {
         }, Projects[`project${index}`].title)
 
         const image = CreateElement('img', {
-            class: 'sidebar-project-image',
-            src: Projects[`project${index}`].image
+            src: Projects[`project${index}`].image,
+            class: 'sidebar-project-image image',
         })
 
         const project = CreateElement('a', {
             class: 'sidebar-project',
-            href: '/',
         }, title, image)
 
         sidebarBox.appendChild(project);

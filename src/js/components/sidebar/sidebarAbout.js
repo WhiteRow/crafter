@@ -15,7 +15,7 @@ export default function SidebarAbout (data) {
         data.title);
 
         const image = CreateElement('img', {
-            class: 'sidebar-about-image',
+            class: 'sidebar-about-image image',
             src: data.image
         })
 

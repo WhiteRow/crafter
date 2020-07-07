@@ -66,3 +66,10 @@ import fbIcon from '../../images/facebook.png';
 import inIcon from '../../images/linkedin.png';
 import twIcon from '../../images/twitter.png';
 import drIcon from '../../images/dribbble.png';
+
+
+/* 
+    Success images
+*/
+
+import success_image01 from '../../images/success-image.png'
