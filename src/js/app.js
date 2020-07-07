@@ -2,6 +2,7 @@ import "../styles/app.sass";
 import './config/images-import.js'
 
 import Lazyload from './components/lazyload';
+import Parallax from './components/parallax';
 import Scrolling from './components/scrolling';
 import Slider from './components/slider';
 import ModalEnter from './components/modal/modalEnter';
@@ -15,6 +16,26 @@ function App() {
     SidebarEnter();
 
     // TODO: image sizer on node js
+
+    const bannerParallax = new Parallax({
+        elements: '.js-parallax-banner',
+        speed: 0.1,
+        direction: 'bottom'
+    })
+
+    const aboutParallax = new Parallax({
+        elements: '.js-parallax-about',
+        speed: 0.05,
+        direction: 'top'
+    })
+
+    const estimateParallax = new Parallax({
+        elements: '.js-parallax-estimate',
+        speed: 0.07,
+        direction: 'bottom'
+    })
+
+
 
     const portfolioSlider = new Slider({
         slider: 'portfolio',
