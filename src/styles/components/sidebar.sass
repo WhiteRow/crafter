@@ -16,6 +16,9 @@
     opacity: 0
     transform: translateX(100%)
 
+    @include cq(700px)
+        width: 100% 
+
     &::-webkit-scrollbar-track
         background-color: transparent
         
@@ -52,6 +55,9 @@
         font-size: 28px
         font-weight: 600
         color: #fff
+
+        @include cq(700px)
+            text-align: center
 
     &-about 
 

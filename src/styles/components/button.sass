@@ -13,6 +13,9 @@
 
     position: relative
     z-index: 1
+
+    @include cq(700px)
+        font-size: 14px
         
     @supports (clip-path: circle(15% at 0% 0%))
         &:before 

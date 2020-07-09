@@ -1,8 +1,16 @@
 .estimate 
     margin-top: 140px
     margin-bottom: 240px
+
+    @include cq(1440px)
+        margin-bottom: 140px
+
+    .l-container
+        @include cq(1000px)
+            text-align: center
+
     &-box 
-        padding: 100px 0
+        padding: 90px 0
         display: flex
         align-items: center
 
@@ -11,6 +19,12 @@
         color: #fff
 
         position: relative
+
+        @include cq(1690px)
+            padding: 50px 0
+
+        @include cq(1100px)    
+            padding: 20px 0
     
     &-title 
         margin-bottom: 30px
@@ -21,6 +35,12 @@
 
         color: #fff    
 
+        @include cq(1690px)
+            max-width: 650px
+
+        @include cq(1000px)
+            margin: 0 auto    
+
     &-button 
         margin-top: 30px
         border: 2px solid #fff
@@ -29,5 +49,17 @@
         position: absolute
         right: 0
         top: -20%
+
+        @include cq(1440px)
+            max-width: 550px
+
+            top: 0
+
+        @include cq(1100px)
+            max-width: 450px
+
+        @include cq(1000px)
+            display: none
+
 
 

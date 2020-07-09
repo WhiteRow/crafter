@@ -1,25 +1,57 @@
 .team 
     margin-top: 100px
 
+    .slider-item-grid 
+        @include cq(550px)
+            flex-direction: column-reverse
+
     &-slider
         width: 100%
         position: relative
+
         .slider-image
-            width: 540px
+            width: 100%
             height: 675px 
+
+            @include cq(700px)
+                height: 500px
+
         .slider-controll
             position: absolute
             bottom: 50px
             right: 275px
 
+            @include cq(900px) 
+                left: 73%
+                right: 0
+                transform: translate(-50%, 0px)
+
+            @include cq(700px) 
+                bottom: -10px
+                left: 68%
+
+            @include cq(550px) 
+                display: none
+
     &-coll 
         position: relative  
         .description
             margin-bottom: 50px
+            @include cq(550px)
+                margin-bottom: 25px
         &:first-child 
             width: 50%
+            @include cq(550px)
+                width: 100%
+
         &:nth-child(2)
             width: 40%
+            @include cq(700px)
+                width: 47% 
+            @include cq(550px)
+                width: 100%
+                margin-bottom: 20px
+                text-align: center
         
     &-about 
         width: 100%
@@ -32,6 +64,11 @@
         bottom: 5%
         left: 50%
         transform: translate(-50%, 0)
+
+        @include cq(900px) 
+            max-width: 250px
+            padding: 5px
+            flex-direction: column
 
     &-name 
         font-size: 18px
@@ -46,6 +83,10 @@
             display: inline-block
             &:hover .team-social-icon
                 background: $primary_gradient
+
+        &-icons 
+            @include cq(900px) 
+                display: inline-block
 
         &-icon
             width: 35px
