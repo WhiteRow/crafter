@@ -11,8 +11,10 @@ export default function Slider(options) {
         mouseDrag: options.mouseDrag,
         loop: false,
         nav: false,  
-        slideBy: 'page',
+        slideBy: 1,
         autoplay: false,
-        responsive: options.responsive
+        responsive: options.responsive,
+        speed: 400,
+        arrowKeys: true,
     });
 }

@@ -2,12 +2,29 @@
     
 .banner 
     @include  bacground(url('../images/home-banner-bg.png'), cover, no-repeat, center)
+    @include cq(1000px)
+        height: 100vh
 
     .l-container 
         padding-bottom: 68px
+        @include cq(1220px)
+            padding-bottom: 0px
+        @include cq(1000px)
+            height: 100%
     
     .l-block 
         flex: 0 0 50%
+
+        &:nth-child(1)
+            flex: 0 0 50%
+
+            @include cq(1000px)
+                flex: 0 0 100%
+                text-align: center
+
+        &:nth-child(2)
+            @include cq(1000px)
+                display: none
 
     .description
         margin-bottom: 40px         
@@ -15,8 +32,14 @@
     &-img
         padding-top: 200px
 
+        @include cq(1220px)
+            max-width: 500px
+
     .watch-video 
         margin-top: 70px
+
+        @include cq(1000px)
+            justify-content: center
         
         &-text 
             &-bold 

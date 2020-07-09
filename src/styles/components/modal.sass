@@ -1,5 +1,5 @@
 .modal 
-    padding: 40px 0
+    padding: 20px 0
 
     position: fixed
 
@@ -22,9 +22,6 @@
     &.is-show
         opacity: 1
         z-index: 4
-        // animation-name: fadeIn
-        // animation-duration: .4s
-        // animation-timing-function: ease-in-out
 
     &-close 
         width: 18px
@@ -32,16 +29,11 @@
 
         fill: $white
         opacity: .7
+
+        @include cq(700px)
+            margin-right: 20px
         
         &:hover 
             opacity: 1
-
-    @keyframes fadeIn
-        0%
-            opacity: 0
-            z-index: 0
-        100%
-            opacity: 1
-            z-index: 4
 
                     

@@ -1,5 +1,8 @@
 .blog 
     margin-bottom: 120px
+    @include cq(700px)
+        margin-bottom: 50px 
+
     &-box
         display: flex
 
@@ -7,15 +10,34 @@
             margin-bottom: 70px 
             align-items: flex-end
             justify-content: space-between
+            
+            @include cq(700px)  
+                margin-bottom: 25px 
+                flex-direction: column
+                align-items: center
 
         &.cards-grid
             margin: 0 -15px
+            
+            @include cq(700px)  
+                flex-direction: column
+                max-width: 400px
+                margin: 0 auto
 
         &-part
             max-width: 500px
 
+            @include cq(700px) 
+                max-width: 100%
+                margin-bottom: 20px
+
+                text-align: center
+                
     &-title 
-        max-width: 400px     
+        max-width: 400px    
+
+        @include cq(700px)  
+            max-width: 100%
 
     &-card
         $sides_margin: 15px
@@ -32,6 +54,11 @@
             
             .blog-card-thumb:before                
                 transform: rotate(55deg) translate(0px, 420px)
+
+        @include cq(700px)  
+            max-width: 100%
+            flex: 0 0 100%
+            margin-bottom: 30px         
 
         &-thumb 
             position: relative
@@ -57,6 +84,9 @@
         &-details 
             padding: 25px
 
+            @include cq(900px) 
+                padding: 10px
+
         &-date,
         &-description 
             color: $gray
@@ -71,6 +101,9 @@
 
             font-size: 18px    
             color: $sub_black
+
+            @include cq(900px) 
+                font-size: 16px   
 
         &-description 
             margin-bottom: 20px    

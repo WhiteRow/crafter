@@ -35,8 +35,6 @@ function App() {
         direction: 'bottom'
     })
 
-
-
     const portfolioSlider = new Slider({
         slider: 'portfolio',
         mode: 'carousel',

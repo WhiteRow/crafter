@@ -3,11 +3,19 @@
 
     background-color: $off_black
 
+    @include cq(1200px)
+        padding: 60px
+
     &-grid 
         display: flex
         align-items: flex-start
 
         margin: 0 -30px
+
+
+        @include cq(900px)
+            flex-wrap: wrap
+            justify-content: space-between
 
     &-row,
     &-nav  
@@ -25,6 +33,17 @@
         flex: calc(25% - #{$sides_margin*2})
         max-width: calc(25% - #{$sides_margin*2})
         margin: 0 $sides_margin
+
+        @include cq(1000px)
+            $sides_margin: 15px 
+            max-width: calc(25% - #{$sides_margin*2})
+            flex: calc(25% - #{$sides_margin*2})
+            margin: 0 $sides_margin 35px $sides_margin
+
+        @include cq(900px)
+            flex: 0 0 40%
+            max-width: 40%
+            
 
         &-title 
             margin-bottom: 25px
