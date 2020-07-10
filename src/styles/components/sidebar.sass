@@ -19,6 +19,9 @@
     @include cq(700px)
         width: 100% 
 
+    @include cq(500px)
+        padding: 10px  
+
     &::-webkit-scrollbar-track
         background-color: transparent
         
@@ -65,6 +68,10 @@
             display: block
             max-width: 400px
             margin: 0 auto 40px auto
+
+            @include cq(700px)
+                max-width: 100%
+                margin: 0 auto 20px auto
 
         &-paragraph 
             margin-bottom: 10px
