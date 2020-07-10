@@ -7,6 +7,7 @@ const images = require('./webpack/images');
 const surceMap = require('./webpack/sourceMap');
 const server = require('./webpack/server');
 const extractFiles = require('./webpack/files.extract');
+const clear = require('./webpack/clear');
 
 const paths = {
 	source: path.join(__dirname, 'src'),
@@ -40,14 +41,14 @@ const main = merge([
 
 	scripts(),
 	images(),
-	extractFiles()
+	extractFiles(),
 ]);
 
 module.exports = function(env, argv) {
 	if (argv.mode === 'production') {
-		return merge([main, extractCSS()]);
+		return merge([main, extractCSS(), clear(paths.distribution)])
 	}
 	if (argv.mode === 'development') {
-		return merge([main, server(), styles(), surceMap(),]);
+		return merge([main, server(), styles(), surceMap()]);
 	}
 };
