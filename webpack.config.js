@@ -40,7 +40,6 @@ const main = merge([
 
 	scripts(),
 	images(),
-	surceMap(),
 	extractFiles()
 ]);
 
@@ -49,6 +48,6 @@ module.exports = function(env, argv) {
 		return merge([main, extractCSS()]);
 	}
 	if (argv.mode === 'development') {
-		return merge([main, server(), styles()]);
+		return merge([main, server(), styles(), surceMap(),]);
 	}
 };

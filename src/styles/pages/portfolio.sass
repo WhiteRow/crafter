@@ -2,6 +2,10 @@
     margin-top: 100px 
     padding: 0 10px 0 150px
 
+    @include cq(500px)
+        flex-direction: column
+        margin-top: 20px 
+
     @include cq(1200px)
         padding: 0 10px 0 15px
 
@@ -11,9 +15,18 @@
     .primary-button 
         margin-top: 40px 
 
+        @include cq(500px)
+            margin-top: 20px
+
     .l-block 
         &:first-child 
             flex: 0 0 49%
+            @include cq(500px)
+                flex: 0 0 100%
+
+                margin-bottom: 20px
+
+                text-align: center    
 
     &-slider 
         .slider-image 
@@ -21,6 +34,9 @@
             height: 385px
 
             opacity: .8
+
+            @include cq(500px)
+                height: 230px
         
         .slider-item 
             text-align: right

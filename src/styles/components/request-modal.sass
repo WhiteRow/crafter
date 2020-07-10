@@ -16,7 +16,7 @@
         
         &::-webkit-scrollbar  
             background-color: transparent
-            width: 8px
+            width: 0px
 
         &::-webkit-scrollbar-thumb
             background-color: hsla(0, 0%, 0%, 0)
@@ -31,6 +31,9 @@
 
         @include cq(1440px)
             padding: 40px 25px
+
+        @include cq(500px)
+            padding: 30px 15px
 
     &-title
         margin-bottom: 20px
@@ -124,8 +127,8 @@
                     opacity: 0    
 
             &-hidden
-                width: 25px
-                height: 25px
+                width: 15px
+                height: 15px
 
                 opacity: 0
                 z-index: 2

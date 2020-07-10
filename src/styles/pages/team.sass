@@ -1,10 +1,12 @@
 .team 
     margin-top: 100px
-
+    @include cq(500px)
+        margin-top: 50px
+        
     .slider-item-grid 
         @include cq(550px)
             flex-direction: column-reverse
-
+        
     &-slider
         width: 100%
         position: relative
@@ -15,6 +17,9 @@
 
             @include cq(700px)
                 height: 500px
+
+            @include cq(500px)
+                height: 300px
 
         .slider-controll
             position: absolute

@@ -9,6 +9,9 @@
     @include cq(900px)
         font-size: 36px
 
+    @include cq(500px)
+        font-size: 32px
+    
 .centered-title,
 .overhead-title  
     text-align: center
@@ -35,6 +38,9 @@
 .is-non-scrolled 
     overflow: hidden
     padding-right: 8px
+
+    @include cq(900px)
+        padding-right: 0px
 
 .link 
     color: $primary_color

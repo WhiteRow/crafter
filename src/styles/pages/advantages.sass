@@ -44,6 +44,12 @@
             opacity: 0
             left: -25px
 
+            @include cq(700px)
+                left: 50%
+                bottom: 50%
+                transform: translate(-50%, 0%)
+
+
         &-icon-is-different,
         &-icon 
             transition: opacity 0.3s ease-in-out
